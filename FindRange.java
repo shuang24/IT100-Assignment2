@@ -9,6 +9,11 @@
 import acm.program.*;
 
 public class FindRange extends ConsoleProgram {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public void run() {
 		/* You fill this in */
 	}
