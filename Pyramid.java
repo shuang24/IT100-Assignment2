@@ -25,7 +25,6 @@ public class Pyramid extends GraphicsProgram {
 	/** Number of bricks in the base of the pyramid */
 	private static final int BRICKS_IN_BASE = 14;
 
-	private double counter = 12;
 
 	public void run() {
 		int y = getHeight() - BRICK_HEIGHT;
