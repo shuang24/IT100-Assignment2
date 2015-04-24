@@ -28,27 +28,16 @@ public class Pyramid extends GraphicsProgram {
 	private double counter = 12;
 
 	public void run() {
-		for (double i = 0; i < BRICKS_IN_BASE; i++) { // controls the number of
-														// rows (height)
-			// System.out.print("\n i= "+i+"\t");
-			for (double j = counter / 2; j > 0; j--) { // prints bricks to the
-														// left of center point
-				GRect rect = new GRect(getWidth() / 2 - (BRICK_WIDTH * j),
-						BRICK_HEIGHT + (BRICK_HEIGHT * i), BRICK_WIDTH,
-						BRICK_HEIGHT);
-				add(rect);
-				// System.out.print("j= "+j+"\t");
+		int y = getHeight() - BRICK_HEIGHT;
+		for (int n = BRICKS_IN_BASE; n >= 0; n--) {
+			int rowLength = n * BRICK_WIDTH;
+			int x = ((getWidth() / 2) - (rowLength / 2) - (BRICK_WIDTH / 2));
+			for (int i = 0; i <= rowLength; i += BRICK_WIDTH) {
+				pause(20);
+				GRect brick = new GRect(x + i, y, BRICK_WIDTH, BRICK_HEIGHT);
+				add(brick);
 			}
-
-			for (double k = counter / 2; k > 0; k--) { // prints bricks to the
-														// right of center point
-				GRect rect2 = new GRect(getWidth() / 2 + (BRICK_WIDTH * k),
-						BRICK_HEIGHT - (BRICK_HEIGHT * i), BRICK_WIDTH,
-						BRICK_HEIGHT);
-				add(rect2);
-				// System.out.print(" k="+ k +"\t");
-			}
-			counter -= 1;
+			y -= BRICK_HEIGHT;
 		}
 	}
 }
