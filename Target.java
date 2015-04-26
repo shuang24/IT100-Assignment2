@@ -15,7 +15,7 @@ public class Target extends GraphicsProgram {
 	private static final double circle_one_radius = 1*pixels_per_sq_inch;
 	private static final double circle_two_radius = 0.3*pixels_per_sq_inch;
 	private static final Color color_one = Color.RED;
-	private static final color color_two = Color.WHITE;
+	private static final Color color_two = Color.WHITE;
 	
 	public void run() {
 		// Add 3 circle to make a target
