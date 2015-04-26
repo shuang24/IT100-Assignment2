@@ -28,6 +28,7 @@ public class Target extends GraphicsProgram {
 	}
 	
 	private GOval centredCircle (double r, Color color) {
+		
 		/* Draw a circle in the middle of the canvas, where r is the radius, midX and midY
 		* are the coordinates for the center of the circle.
 		*/
