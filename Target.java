@@ -25,7 +25,7 @@ public class Target extends GraphicsProgram {
 	}
 	
 	private GOval centredCircle (double r, Color color) {
-		GOval circle = new GOval(midx()-r,midy()-r, 2*r, 2*r);
+		GOval circle = new GOval(midX()-r,midY()-r, 2*r, 2*r);
 		circle.setFilled(true);
 		circle.setFillColor(color);
 		circle.setColor(color);
