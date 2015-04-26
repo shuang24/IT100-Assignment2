@@ -32,7 +32,7 @@ public class Target extends GraphicsProgram {
 		return circle;
 	}
 	
-	// centre of the canvas
+	// center of the canvas
 	private int midX() {
 		int x = getWidth()/2;
 		return x;
