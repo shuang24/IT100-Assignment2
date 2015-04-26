@@ -23,6 +23,7 @@ public class Target extends GraphicsProgram {
 		add(centredCircle(circle_one_radius, color_one));
 		
 	}
+	
 	private GOval centredCircle (double r, Color color) {
 		GOval circle = new GOval(midx()-r,midy()-r, 2*r, 2*r);
 		circle.setFilled(true);
@@ -30,4 +31,7 @@ public class Target extends GraphicsProgram {
 		circle.setColor(color);
 		return circle;
 	}
+	
+	// centre of the canvas
+	private int midX
 }
