@@ -22,6 +22,7 @@ public class Target extends GraphicsProgram {
 		// Add 3 circle to make a target
 		
 		add(centredCircle(circle_one_radius, color_one));
+		add(centredCircle(circle_two_radius, color_two));
 		
 	}
 	
