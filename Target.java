@@ -13,7 +13,8 @@ import java.awt.*;
 public class Target extends GraphicsProgram {	
 	private static final double pixels_per_sq_inch = 72;
 	private static final double circle_one_radius = 1*pixels_per_sq_inch;
-	private static final double circle_two_radius = 0.3*pixels_per_sq_inch;
+	private static final double circle_two_radius = 1*pixels_per_sq_inch;
+	private static final double circle_three_radius = 0.3*pixels_per_sq_inch;
 	private static final Color color_one = Color.RED;
 	private static final Color color_two = Color.WHITE;
 	
