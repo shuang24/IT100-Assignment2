@@ -33,5 +33,13 @@ public class Target extends GraphicsProgram {
 	}
 	
 	// centre of the canvas
-	private int midX
+	private int midX() {
+		int x = getWidth()/2;
+		return x;
+	}
+	
+	private int midY(){
+		int y = getHeight()/2;
+		return y;
+	}
 }
