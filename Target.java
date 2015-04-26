@@ -23,6 +23,7 @@ public class Target extends GraphicsProgram {
 		
 		add(centredCircle(circle_one_radius, color_one));
 		add(centredCircle(circle_two_radius, color_two));
+		add(centredCircle(circle_three_radius, color_one));
 		
 	}
 	
