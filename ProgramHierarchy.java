@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class ProgramHierarchy extends GraphicsProgram {	
 	
-	private static final int belowBoxs = 4;
+	private static final int belowTheBoxs = 4;
 	private static final int boxWidth = 100;
 	private static final int boxHeight = 50;
 	private static final int boxDistances = 20;
@@ -46,8 +46,8 @@ public class ProgramHierarchy extends GraphicsProgram {
  
 		createBox(midX - (boxWidth / 2), midY - (rowDistances / 2),names[0]);
  
-		int placeX = midX - ((belowBoxs * boxWidth)/2) - ((belowBoxs * boxDistances)/2);
-		for (int i =0; i < belowBoxs; i++)
+		int placeX = midX - ((belowTheBoxs * boxWidth)/2) - ((belowTheBoxs * boxDistances)/2);
+		for (int i =0; i < belowTheBoxs; i++)
 		{
 			createBox(placeX, midY + (rowDistances / 2), names[i+1]);
 			GLine joiningLine = new GLine(midX, midY - ((rowDistances / 2)-boxHeight),
