@@ -11,59 +11,50 @@ import java.awt.*;
 
 public class ProgramHierarchy extends GraphicsProgram {	
 	
-	private static final int BOX_HEIGHT = 20;
-	private static final int BOX_WIDTH = 100;
-	
+	private void createBox(int X, int Y, String name)
+	{
+		GRect gObjectBox = new GRect(X, Y, boxWidth, boxHeight);
+		GLabel text = new GLabel(name);
+ 
+		// replace the X,Y with the new cords to place the text into the middle of the box
+		X += (boxWidth / 2) - (text.getWidth()/2);
+		Y += (boxHeight / 2) + (text.getAscent()/2);
+		text.setLocation(X, Y);
+ 
+		add(gObjectBox);
+		add(text);
+	}
+ 
 	public void run() {
-		drawRowOne();
-		drawRowTwo();
-	}
-
-	private void drawRowOne() {
-		int midX = getWitdh()/2;
-		int midY = getHeight90/2;
-		
-		drawBox(midX,midY, "gObject");
-	}
-	
-	private void drawRowTwo() {
-		String boxType = "GLabel";
-		for (int i = 1; i &lt; 5; i++) {
-			int centerY = getHeight() * 2/3;
-			int centerX = getWidth()/5 * i;
+		// You fill this in
+		// find the centre, to then build around it
+		int midX = getWidth() / 2;
+		int midY = (getHeight() / 2)-boxHeight;
  
-			switch (i) {
-			case 1: break;
-			case 2: boxType = &quot;GLine&quot;; break;
-			case 3: boxType = &quot;GOval&quot;; break;
-			case 4: boxType = &quot;GRect&quot;; break;
-			}
+		String names[] = new String[5];
+		names[0] = "GObject";
+		names[1] = "GLabel";
+		names[2] = "GLine";
+		names[3] = "GOval";
+		names[4] = "GRect";
  
-			drawBox(centerX, centerY, boxType);
-			drawLineToRowOne(centerX, centerY);
+		createBox(midX - (boxWidth / 2), midY - (rowDistances / 2),names[0]);
+ 
+		int placeX = midX - ((belowBoxs * boxWidth)/2) - ((belowBoxs * boxDistances)/2);
+		for (int i =0; i < belowBoxs; i++)
+		{
+			createBox(placeX, midY + (rowDistances / 2), names[i+1]);
+			GLine joiningLine = new GLine(midX, midY - ((rowDistances / 2)-boxHeight),
+										placeX + (boxWidth/2), midY + (rowDistances/2));
+			add(joiningLine);
+			placeX += (boxWidth + boxDistances);
 		}
 	}
-	
-	private void drawBox(int centerX, int centerY, String boxType) {
-		int boxX = centerX - BOX_WIDTH/2;
-		int boxY = centerY - BOX_HEIGHT/2;
-		GRect box = new GRect(boxX, boxY, BOX_WIDTH, BOX_HEIGHT);
-		add(box);
  
-		GLabel label = new GLabel(boxType);
-		int labelX = centerX - (int) label.getWidth()/2;
-		int labelY = centerY + (int) label.getAscent()/2;
-		add(label, labelX, labelY);	
- 
-	}
- 
-	private void drawLineToRowOne(int centerX, int centerY) {
-		int x0 = centerX;
-		int y0 = centerY - BOX_HEIGHT/2;
-		int x1 = getWidth()/2;
-		int y1 = getHeight()/3 + BOX_HEIGHT/2;
-		GLine line = new GLine(x0, y0, x1, y1);
-		add(line);
-	}
- 
+	private static final int belowBoxs = 4;
+	private static final int boxWidth = 100;
+	private static final int boxHeight = 50;
+	private static final int boxDistances = 20;
+	private static final int rowDistances = 150;
 }
+ 
