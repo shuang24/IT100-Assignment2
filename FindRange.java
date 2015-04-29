@@ -24,8 +24,15 @@ public class FindRange extends ConsoleProgram {
 			println("Na value have been entered.");
 		} else {
 			int smallest = value;
-			int largerst = value;
-			
+			int largest = value;
+			while(true){
+				value = readInt("? ");
+				if(value == SENTINEL_VALUE) break;
+				if (smallest > value) smallest = value;
+				else if (largest < value) largest = value;
+			}
+			println("smallest: " + smallest);
+			println("largest: " + largest;)
 		}
 	}
 }
