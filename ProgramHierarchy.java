@@ -11,6 +11,12 @@ import java.awt.*;
 
 public class ProgramHierarchy extends GraphicsProgram {	
 	
+	private static final int belowBoxs = 4;
+	private static final int boxWidth = 100;
+	private static final int boxHeight = 50;
+	private static final int boxDistances = 20;
+	private static final int rowDistances = 150;
+	
 	private void createBox(int X, int Y, String name)
 	{
 		GRect gObjectBox = new GRect(X, Y, boxWidth, boxHeight);
@@ -50,11 +56,5 @@ public class ProgramHierarchy extends GraphicsProgram {
 			placeX += (boxWidth + boxDistances);
 		}
 	}
- 
-	private static final int belowBoxs = 4;
-	private static final int boxWidth = 100;
-	private static final int boxHeight = 50;
-	private static final int boxDistances = 20;
-	private static final int rowDistances = 150;
 }
  
