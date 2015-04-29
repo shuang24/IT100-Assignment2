@@ -1,6 +1,6 @@
 /*
  * File: FindRange.java
- * Name: 
+ * Name: Steven Huang
  * Section Leader: 
  * --------------------
  * This file is the starter file for the FindRange problem.
