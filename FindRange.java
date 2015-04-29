@@ -32,7 +32,7 @@ public class FindRange extends ConsoleProgram {
 				else if (largest < value) largest = value;
 			}
 			println("smallest: " + smallest);
-			println("largest: " + largest;)
+			println("largest: " + largest);
 		}
 	}
 }
