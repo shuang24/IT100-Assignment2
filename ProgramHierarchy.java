@@ -1,7 +1,6 @@
 /*
  * File: ProgramHierarchy.java
- * Name: 
- * Section Leader: 
+ * Name: Steven Huang
  * ---------------------------
  * This file is the starter file for the ProgramHierarchy problem.
  */
