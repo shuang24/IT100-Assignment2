@@ -13,6 +13,7 @@ public class FindRange extends ConsoleProgram {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private static final int SENTINEL_VALUE = 0;
 
 	public void run() {
 		/* You fill this in */
