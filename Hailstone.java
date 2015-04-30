@@ -17,7 +17,7 @@ public class Hailstone extends ConsoleProgram {
 		while ( number !=1){
 			if (number % 2 == 1){
 				int temp = 3 * number + 1;
-				println(number + "is odd, so I make 3n+1: " + temp);
+				println(number + "is odd, so I make 3n + 1: " + temp);
 				number = temp;
 			} else {
 				int temp = number / 2;
