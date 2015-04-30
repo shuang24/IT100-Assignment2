@@ -21,7 +21,7 @@ public class Hailstone extends ConsoleProgram {
 				number = temp;
 			} else {
 				int temp = number / 2;
-				println(number + " is even, so I take half" + temp);
+				println(number + " is even, so I take half " + temp);
 				number = temp;
 			}
 			steps ++;
