@@ -1,6 +1,6 @@
 /*
  * File: Hailstone.java
- * Name: 
+ * Name: Steven Huang
  * Section Leader: 
  * --------------------
  * This file is the starter file for the Hailstone problem.
